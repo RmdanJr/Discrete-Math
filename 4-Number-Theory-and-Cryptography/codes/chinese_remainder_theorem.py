@@ -24,10 +24,10 @@ def extended_gcd(a, b):
 
 def divide(a, b, n):
     assert n > 1 and a > 0 and gcd(a, n) == 1
-    if a >= b:
-        d, x, y = extended_gcd(a, b)
+    if a >= n:
+        d, x, y = extended_gcd(a, n)
     else:
-        d, y, x = extended_gcd(b, a)
+        d, y, x = extended_gcd(n, a)
     k = x % n
     return b * k % n
 
